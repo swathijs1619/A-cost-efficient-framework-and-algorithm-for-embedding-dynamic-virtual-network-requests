@@ -9,7 +9,7 @@ for netId in range(1, 4):
         Gs = substrate[:Ns,]
         bandS = substrate[Ns:2*Ns,]
         capa = substrate[2*Ns,]
-        
+
         vn_request = readCSV("VN" + str(Nv) + ".csv", delimiter=',')
         Nv = vn_request.shape[1]
         Gv = vn_request[:Nv, ]
