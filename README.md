@@ -11,6 +11,6 @@ Following are the dependencies one has to install in their system
 ## Run
 After downloading all the dependencies run the following files:-
 
-- Generate_SubstrateNetwork.py
-- Generate_InitialVNR.py
-- Create_InitialVNEmbedding.py
+- python Generate_SubstrateNetwork.py
+- python Generate_InitialVNR.py
+- 
