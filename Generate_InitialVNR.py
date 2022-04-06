@@ -25,5 +25,8 @@ for Nv in nodes:
             countEdge[col] += 1
     req = np.random.randint(15, high=21, size=(1, Nv), dtype=np.uint32)
     band = Gv * np.random.randint(10, high=16, size=(Nv, Nv), dtype=np.uint32)
+    for row in range(0,Nv):
+        for col in range(row,Nv):
+            band[col][row] = band[row][col]
     combined = np.concatenate((Gv, band, req))
     np.savetxt(filename, combined, fmt='%d', delimiter=",")
