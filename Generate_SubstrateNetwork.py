@@ -138,10 +138,22 @@ china_net = [
     ]
 
 EngNet = np.asarray(england_net, dtype=np.uint32)
+nodes = EngNet.shape[0]
+band = EngNet * 100
+capa = np.full((1, nodes), 1000, dtype=np.uint32)
+EngNet = np.concatenate((EngNet, band, capa))
 np.savetxt("Net1.csv", EngNet, fmt='%d', delimiter=",")
 
 USANet = np.asarray(usa_net, dtype=np.uint32)
+nodes = USANet.shape[0]
+band = USANet * 100
+capa = np.full((1, nodes), 1000, dtype=np.uint32)
+USANet = np.concatenate((USANet, band, capa))
 np.savetxt("Net2.csv", USANet, fmt='%d', delimiter=",")
 
 ChinaNet = np.asarray(china_net, dtype=np.uint32)
+nodes = ChinaNet.shape[0]
+band = ChinaNet * 100
+capa = np.full((1, nodes), 1000, dtype=np.uint32)
+ChinaNet = np.concatenate((ChinaNet, band, capa))
 np.savetxt("Net3.csv", ChinaNet, fmt='%d', delimiter=",")
